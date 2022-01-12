@@ -1,0 +1,6 @@
+# Author: etcroot
+# Website: https://github.com/etcroot
+# Edit the max allowed ping.
+max-ping: 500
+
+kick-msg: "You've been kicked for too high ping."

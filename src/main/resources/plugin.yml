@@ -1,0 +1,5 @@
+name: PingKick
+version: '${project.version}'
+author: etcroot
+main: dev.etcroot.pingkick.PingKick
+api-version: 1.18
