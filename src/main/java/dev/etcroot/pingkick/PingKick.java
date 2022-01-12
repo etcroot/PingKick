@@ -12,13 +12,16 @@ public final class PingKick extends JavaPlugin implements Listener {
 
     int maxPing = getConfig().getInt("max-ping");
     String msg = getConfig().getString("kick-msg");
+    public String color(String message) {
+        return ChatColor.translateAlternateColorCodes('&', message);
+    }
 
     @EventHandler
     public void CheckPings(PlayerJoinEvent e) {
         for(Player p : getServer().getOnlinePlayers()) {
             int ping = p.getPing();
             if(ping > maxPing) {
-                e.getPlayer().kickPlayer(ChatColor.RED + msg);
+                e.getPlayer().kickPlayer(color(msg));
             }
         }
     }
